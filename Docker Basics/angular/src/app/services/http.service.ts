@@ -11,7 +11,7 @@ export class HttpService {
   constructor(private http: HttpClient) {}
 
   getQuotations(): Observable<Quotation[]>{
-    return this.http.get<Quotation[]>(environment.localhost + '/quotations');
+    return this.http.get<Quotation[]>(environment.host + '/quotations');
   }
 
 }
